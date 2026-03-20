@@ -22,5 +22,4 @@ jobs:
         with:
           name: package
           # Ity no lalana mahazatra hivoahan'ny APK
-          path: bin/*.
-          apk
+          path: bin/*.apk
