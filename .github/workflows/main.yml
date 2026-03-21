@@ -6,20 +6,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         with:
-          # Aza asiana "buildozer" intsony eto aloha
-          command: android debug
-          # Manondro fa eo amin'ny faka (root) ny tetikasa
-          repository_root: .
+          command: buildozer android debug
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: package
-          # Ity no lalana mahazatra hivoahan'ny APK
           path: bin/*.apk
